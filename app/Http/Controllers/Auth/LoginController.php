@@ -37,4 +37,11 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+
+//    override method exit in path : vendor/laravel/ui/auth-backend/AuthenticatesUsers.php
+    public function username()
+    {
+        return 'mobile';
+    }
 }
